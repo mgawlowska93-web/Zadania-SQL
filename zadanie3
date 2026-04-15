@@ -1,1 +1,17 @@
 CREATE DATABASE gift_list
+
+USE gift_list;
+
+CREATE TABLE gifts_2020
+  (id INTEGER PRIMARY KEY, 
+  recipients_name TEXT NOT NULL,
+  gift_idea TEXT NOT NULL, 
+  price INTEGER DEFAULT 100,
+  place_of_purchase TEXT NOT NULL);
+
+INSERT INTO gifts_2020 
+   Values (1, "Magdalena", "Perfumy", 120, "Rossmann"), 
+          (2, "Karolina", "Mikser", 89, "Alegro"), 
+          (3, "Mateusz", "Klocki", 75, "Smyk"), 
+          (4, "Karol", "Gra", 69, "Media Expert"), 
+          (5, "Michal", "Planszowka", 100, "Empik");
