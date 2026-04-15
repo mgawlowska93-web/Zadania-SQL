@@ -10,8 +10,24 @@ CREATE TABLE gifts_2020
   place_of_purchase TEXT NOT NULL);
 
 INSERT INTO gifts_2020 
-   Values (1, "Magdalena", "Perfumy", 120, "Rossmann"), 
-          (2, "Karolina", "Mikser", 89, "Alegro"), 
-          (3, "Mateusz", "Klocki", 75, "Smyk"), 
-          (4, "Karol", "Gra", 69, "Media Expert"), 
-          (5, "Michal", "Planszowka", 100, "Empik");
+VALUES (1, "Magdalena", "Perfumy", 120, "Rossmann"), 
+       (2, "Karolina", "Mikser", 89, "Alegro"), 
+       (3, "Mateusz", "Klocki", 75, "Smyk"), 
+       (4, "Karol", "Gra", 69, "Media Expert"), 
+       (5, "Michal", "Planszowka", 100, "Empik");
+          
+SELECT * FROM gifts_2020; 
+          
+UPDATE gifts_2020
+SET gift_idea= "Rower" WHERE id=3;
+
+SELECT gift_idea FROM gifts_2020 WHERE id=3;
+
+DELETE from gifts_2020 WHERE id=1;
+
+SELECT * FROM gifts_2020; 
+
+ALTER TABLE gifts_2020 
+DROP COLUMN place_of_purchase;
+          
+SELECT recipients_name FROM gifts_2020 WHERE id IN (3,4,5)
