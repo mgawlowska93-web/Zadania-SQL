@@ -1,2 +1,35 @@
 CREATE DATABASE my_hobbies;
 
+USE my_hobbies;
+
+CREATE TABLE hobbies
+ (id INTEGER PRIMARY KEY AUTO_INCREMENT, 
+ name TEXT NOT NULL,
+ description TEXT NOT NULL,
+ completion_date DATE DEFAULT "2025-01-01");
+ 
+INSERT INTO hobbies (name, description)
+VALUES ('sport','yoga, zumba'),
+       ('sztuka','akwarele, akryl'),
+		   ('ksiazki','Wladca Pierscieni, Wiedzmin, Pan lodowego ogrodu'),
+		   ('seriale','Breaking Bad, Bridgerton, Mandalorian, Rick and Morty'),
+		   ('muzyka','Rock, Pop, Hard rock, Latino, Rap'),
+		   ('gotowanie','Tradycujne polskie potrawy, Kuchnia wloska, Kuchnia azjatycka');
+
+SELECT * FROM hobbies;
+
+INSERT INTO hobbies 
+VALUES (7, 'taniec', 'latino, hip-hop', '2001-06-01');
+
+UPDATE hobbies SET completion_date = '2015-04-25' WHERE id = 4;
+
+SELECT * FROM hobbies;
+
+UPDATE hobbies SET name = ''  WHERE id = 5; 
+
+DELETE from hobbies WHERE id = 5;
+
+SELECT * FROM hobbies;
+
+
+SELECT * FROM hobbies;
